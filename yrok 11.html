@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресурс Развития - Регистрация</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .registration-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .form-header {
+            background: #2c3e50;
+            padding: 25px;
+            border-radius: 10px 10px 0 0;
+            color: white;
+        }
+
+        .form-header h2 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .form-body {
+            padding: 30px;
+        }
+
+        /* Стили формы */
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #34495e;
+            font-weight: 500;
+            font-size: 0.95em;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e4e7;
+            border-radius: 6px;
+            transition: border-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .form-control:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        /* Группы элементов */
+        .radio-group, .checkbox-group {
+            display: flex;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .radio-item, .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .radio-item input[type="radio"],
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Кнопка отправки */
+        .submit-btn {
+            background: #27ae60;
+            color: white;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn:hover {
+            background: #219a52;
+        }
+
+        /* Дополнительные элементы */
+        .company-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .company-logo img {
+            height: 40px;
+        }
+
+        .form-note {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        select.form-control {
+            appearance: none;
+            background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e") no-repeat right 15px center/15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <div class="form-header">
+            <div class="company-logo">
+                <!-- Вставить логотип -->
+                <h2>Ресурс Развития</h2>
+                <span>Профессиональный рост</span>
+            </div>
+        </div>
+
+        <form class="form-body">
+            <!-- Имя -->
+            <div class="form-group">
+                <label class="form-label" for="name">Полное имя:</label>
+                <input class="form-control" type="text" id="name" name="name" required placeholder="Иванов Иван Иванович">
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label class="form-label" for="email">Корпоративная почта:</label>
+                <input class="form-control" type="email" id="email" name="email" required placeholder="example@company.ru">
+            </div>
+
+            <!-- Пароли -->
+            <div class="form-group">
+                <label class="form-label" for="password">Пароль:</label>
+                <input class="form-control" type="password" id="password" name="password" required>
+                <div class="form-note">Минимум 8 символов, включая цифры и спецсимволы</div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="confirm-password">Подтверждение пароля:</label>
+                <input class="form-control" type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+
+            <!-- Пол -->
+            <div class="form-group">
+                <label class="form-label">Пол:</label>
+                <div class="radio-group">
+                    <label class="radio-item">
+                        <input type="radio" name="gender" value="male" required> Мужской
+                    </label>
+                    <label class="radio-item">
+                        <input type="radio" name="gender" value="female"> Женский
+                    </label>
+                </div>
+            </div>
+
+            <!-- Интересы -->
+            <div class="form-group">
+                <label class="form-label">Профессиональные интересы:</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="interests" value="management"> Менеджмент
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="interests" value="it"> IT-технологии
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="interests" value="marketing"> Маркетинг
+                    </label>
+                </div>
+            </div>
+
+            <!-- Страна -->
+            <div class="form-group">
+                <label class="form-label" for="country">Страна работы:</label>
+                <select class="form-control" id="country" name="country" required>
+                    <option value="">Выберите страну</option>
+                    <option value="ru">Россия</option>
+                    <option value="kz">Казахстан</option>
+                    <option value="by">Беларусь</option>
+                    <option value="am">Армения</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-btn">Присоединиться к сообществу</button>
+        </form>
+    </div>
+</body>
+</html>
